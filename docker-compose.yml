@@ -11,7 +11,7 @@ services:
       GAMEMODE: "creative"
       DIFFICULTY: "hard"
       MAX_PLAYERS: "12"
-      LEVEL_SEED: "f488ab06"
+      LEVEL_SEED: "f24d"
 
     tty: true
     stdin_open: true
@@ -19,7 +19,7 @@ services:
 
     volumes:
       - ./data:/data
-    networks: 
+    networks:
       - bedrock-server
 
 networks:
