@@ -3,19 +3,20 @@ services:
     container_name: bedrock-server
     image: itzg/minecraft-bedrock-server
     ports:
-      - "3737:19132/udp"
+      - "19132:19132/udp"
 
     environment:
       EULA: "TRUE"
       SERVER_NAME: "Bia, Bruno e Álef"
-      GAMEMODE: "creative"
+      GAMEMODE: "survival"
       DIFFICULTY: "hard"
       MAX_PLAYERS: "12"
-      LEVEL_SEED: "f24d"
+      LEVEL_SEED: "424d"
+      ALLOW_CHEATS: "true"
 
     tty: true
     stdin_open: true
-    restart: unless-stopped
+    restart: always
 
     volumes:
       - ./data:/data
