@@ -11,12 +11,6 @@ services:
       GAMEMODE: "creative"
       DIFFICULTY: "hard"
       MAX_PLAYERS: "12"
-      ONLINE_MODE: "TRUE"
-      VIEW_DISTANCE: "32"
-      TICK_DISTANCE: "4"
-
-      # 5 mim
-      PLAYER_IDLE_TIMEOUT: "300"
       LEVEL_SEED: "f488ab06"
 
     tty: true
