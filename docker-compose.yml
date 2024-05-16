@@ -1,0 +1,31 @@
+services:
+  bedrock-server:
+    container_name: bedrock-server
+    image: itzg/minecraft-bedrock-server
+    ports:
+      - 3030:19132/udp
+
+    environment:
+      EULA: "TRUE"
+      SERVER_NAME: "Bia, Bruno e Álef"
+      GAMEMODE: "creative"
+      DIFFICULTY: "hard"
+      MAX_PLAYERS: "12"
+      ONLINE_MODE: "TRUE"
+      VIEW_DISTANCE: "32"
+      TICK_DISTANCE: "4"
+      PLAYER_IDLE_TIMEOUT: "30"
+      LEVEL_SEED: "94a107ba"
+
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+
+    volumes:
+      - ./data:/data
+    networks: 
+      - bedrock-server
+
+networks:
+  bedrock-server:
+    driver: bridge
